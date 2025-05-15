@@ -1,0 +1,43 @@
+-- 1. Moving Average Sales (3-Month Window)
+Moving Average = 
+AVERAGEX(
+    DATESINPERIOD('Sales'[Sales Date], MAX('Sales'[Sales Date]), -3, MONTH),
+    CALCULATE(SUM('Sales'[Total Sales (£)]))
+)
+
+-- 2. Year-over-Year Growth
+YoY Growth (%) = 
+VAR PreviousYearSales = CALCULATE(
+    SUM('Sales'[Total Sales (£)]), 
+    SAMEPERIODLASTYEAR('Sales'[Sales Date])
+) 
+VAR CurrentYearSales = SUM('Sales'[Total Sales (£)]) 
+RETURN 
+IF(
+    NOT(ISBLANK(PreviousYearSales)), 
+    DIVIDE(CurrentYearSales - PreviousYearSales, PreviousYearSales, 0) * 100, 
+    BLANK()
+)
+
+-- 3. Customer Frequency Segment
+FrequencySegment = 
+VAR Freq = MAX('RFM Analysis'[Frequency])
+RETURN 
+SWITCH(TRUE(), 
+    Freq >= 10, "Very Frequent",
+    Freq >= 5, "Frequent",
+    Freq >= 2, "Occasional",
+    "Rare"
+)
+
+-- 4. Total Sales
+Sales_Total = SUM(Sales[Total Sales (£)])
+
+-- 5. Region with highest sales
+RegionWithHighestSales = 
+VAR MaxSales = MAXX( ALL('Sales_By_Region'), [TotalSales] )
+RETURN
+    CALCULATE(
+        MAX('Sales_By_Region'[Region]),
+        'Sales_By_Region'[TotalSales] = MaxSales
+    )
