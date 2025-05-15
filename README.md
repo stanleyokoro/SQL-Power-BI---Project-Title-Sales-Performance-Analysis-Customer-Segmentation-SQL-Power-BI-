@@ -11,7 +11,7 @@ This project analyzes company sales performance and customer behavior using **SQ
 ## 📁 Folder Structure
 
 - `measures.dax` – DAX measures used in the Power BI dashboard.
-- `Sales_Performance_Report.pbix` – Power BI report file.
+- `SQL BI Project.pbix` – Power BI report file.
 - `dashboard1.png` – Preview image of the dashboard.
 
 ## 📌 Key Business Questions Answered
