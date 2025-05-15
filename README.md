@@ -10,10 +10,9 @@ This project analyzes company sales performance and customer behavior using **SQ
 
 ## 📁 Folder Structure
 
-- `data/sales_database.sql` – SQL script to generate and populate sample tables.
-- `dax/measures.dax` – DAX measures used in the Power BI dashboard.
-- `report/Sales_Performance_Report.pbix` – Power BI report file.
-- `images/dashboard-preview.png` – Preview image of the dashboard.
+- `measures.dax` – DAX measures used in the Power BI dashboard.
+- `Sales_Performance_Report.pbix` – Power BI report file.
+- `dashboard1.png` – Preview image of the dashboard.
 
 ## 📌 Key Business Questions Answered
 
@@ -40,11 +39,11 @@ This project analyzes company sales performance and customer behavior using **SQ
 - `Monthly Sales Trend`
 - `Repeat Customer Rate`
 
-See [`dax/measures.dax`](dax/measures.dax) for the full list of measures.
+See [`dax/measures.dax`](measures.dax) for the full list of measures.
 
 ## 📈 Dashboard Preview
 
-![Power BI Dashboard](images/dashboard-preview.png)
+![Power BI Dashboard](dashboard1.png)
 
 ## 🚀 How to Run
 
