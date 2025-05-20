@@ -39,7 +39,7 @@ This project analyzes company sales performance and customer behavior using **SQ
 - `Monthly Sales Trend`
 - `Repeat Customer Rate`
 
-See [`dax/measures.dax`](measures.dax) for the full list of measures.
+See [`/measures.dax`](measures.dax) for the full list of measures.
 
 ## 📈 Dashboard Preview
 
@@ -47,7 +47,7 @@ See [`dax/measures.dax`](measures.dax) for the full list of measures.
 
 ## 🚀 How to Run
 
-1. Run `data/sales_database.sql` in SQL Server to set up the database.
+1. Run `sales_database.sql` in SQL Server to set up the database.
 2. Open the `.pbix` file in Power BI Desktop.
 3. Connect to the SQL Server database.
 4. Refresh the data model and view the dashboard.
